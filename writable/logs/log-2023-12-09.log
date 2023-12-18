@@ -1,0 +1,32 @@
+CRITICAL - 2023-12-09 08:12:57 --> Call to undefined method App\Controllers\PegawaiController::query()
+in APPPATH\Controllers\PegawaiController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PegawaiController->hapus('6')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-09 08:14:23 --> Class "App\Controllers\MLogin" not found
+in APPPATH\Controllers\PegawaiController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PegawaiController->hapus('6')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-12-09 08:14:43 --> mysqli_sql_exception: Unknown column 'id_pegawai' in 'where clause' in C:\xampp\htdocs\api-klinik\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\api-klinik\system\Database\MySQLi\Connection.php(306): mysqli->query('delete from log...', 0)
+#1 C:\xampp\htdocs\api-klinik\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('delete from log...')
+#2 C:\xampp\htdocs\api-klinik\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('delete from log...')
+#3 C:\xampp\htdocs\api-klinik\system\Model.php(867): CodeIgniter\Database\BaseConnection->query('delete from log...')
+#4 C:\xampp\htdocs\api-klinik\app\Controllers\PegawaiController.php(59): CodeIgniter\Model->__call('query', Array)
+#5 C:\xampp\htdocs\api-klinik\system\CodeIgniter.php(942): App\Controllers\PegawaiController->hapus('6')
+#6 C:\xampp\htdocs\api-klinik\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+#7 C:\xampp\htdocs\api-klinik\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\api-klinik\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-12-09 08:14:43 --> Unknown column 'id_pegawai' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Model.php(867): CodeIgniter\Database\BaseConnection->query('delete from login_token where id_pegawai =6 ')
+ 2 APPPATH\Controllers\PegawaiController.php(59): CodeIgniter\Model->__call('query', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\PegawaiController->hapus('6')
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PegawaiController))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
